@@ -1,0 +1,68 @@
+body, html, #Compteur{
+	width: 100%;
+	height:100%;
+	padding: 0px;
+	margin: 0px;
+}
+
+body {
+	position: relative;
+	text-align:center;
+}
+
+
+#main {
+	display: block;
+	position:absolute;
+	top:20%;
+	width: 100%;
+}
+
+.testPotion {
+	padding:0px;
+	display: inline-block;
+	width: 30%;
+	border: 2px black solid;
+	border-radius:8px;
+	text-align:center;
+	cursor: pointer;
+}
+
+.textAdaptative {
+	margin:0;
+}
+
+#resultatGif, #Compteur, #retourMain, #imgDommage, #imgPresque, #imgExcellent, .son{
+	display: none;
+}
+
+#retourMain {
+	position: absolute;
+	top:0;
+	left:0;
+	width: 60px;
+	height: 60px;
+	border:0px;
+	background: none;
+}
+
+#Compteur {
+	position: relative;
+	line-height:1;
+} 
+
+#resultatGif {
+	width:30%;
+	position: absolute;
+	top:20%;
+	left:35%;
+}
+
+#imgDommage, #imgPresque, #imgExcellent {
+	margin: auto;
+	max-width: 90%;
+}
+
+#textResult {
+	font-size: 24px;
+}

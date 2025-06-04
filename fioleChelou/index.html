@@ -1,0 +1,31 @@
+<!Doctype html>
+<html>
+	<head>
+		<title>fioleJauge</title>
+		<meta charset="utf-8">
+		<script src="js/jquery-3.3.1.js"></script>
+		<script src="js/main.js"></script>
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+		<div id="main">
+			<div class="testPotion" id="Dommage"><span class="textAdaptative">Raté</span></div>
+			<div class="testPotion" id="Presque"><span class="textAdaptative">Moyen</span></div>
+			<div class="testPotion" id="Excellent"><span class="textAdaptative">Réussi</span></div>
+		</div>
+		<div id="Compteur"><span id="textCompteur" ></span>
+		</div>
+		<div id="resultatGif">
+			<span id="textResult"></span>
+			<div id="imgResult">
+				<img id="imgDommage" src="image/echec.gif" />
+				<img id="imgPresque" src="image/presque.gif" />
+				<img id="imgExcellent" src="image/excellent.gif" />
+				<audio id="sonDommage" src="son/echec.mp3" class="son" loop></audio>
+				<audio id="sonPresque" src="son/presque.mp3" class="son" loop></audio>
+				<audio id="sonExcellent" src="son/excellent.mp3" class="son" loop></audio>
+			</div>
+		</div>
+		<div><input id="retourMain" type="button"/></div>
+	</body>
+</html>

@@ -1,4 +1,5 @@
-$("#scene").ready(function(){ // exécution uniquement quand la page html a fini de charger
+
+$("body").ready(function(){ // exécution uniquement quand la page html a fini de charger
 	initialisation(); //inclue nos fichier js
     
 	//les évenements
@@ -35,9 +36,9 @@ $(window).resize(function(){
 function retourAcceuil() {
 	$('#main').css('display','block');
 	$('#resultatGif').css('display','none');
-	$('#imgResult').children().css('display','none');
+	$('.imgResult').css('display','none');
 	$('#retourMain').css('display','none');
-	$('.son').each(function(){
+	$('.sonResult').each(function(){
 		this.pause();
 		this.currentTime = 0;
 	}); 
@@ -69,9 +70,9 @@ function affichageResultatGif(textResultat) {
 	setTimeout(() => {
 		$('#resultatGif').css('display','block');
 		$('#retourMain').css('display','block');
-		$('#textResult').html('' + textResultat);	
-		$('#img' + textResultat).css('display','block');
-		$("#son" + textResultat)[0].play();
+		$('#textResult').html('' + textResultat);
+		imgResultAfficher(textResultat);
+		sonResultEntendu(textResultat);
 	}, "5100");
 }
 
@@ -130,3 +131,17 @@ function adaptationText(texteAChanger) {
 
 
 
+function nombreAleatoire(max) {
+	return 1 + Math.floor(Math.random() * max);
+}
+
+function imgResultAfficher(niveau) {
+	var enfantImgResult=$('#' + niveau  + 'Img').children();
+	$(enfantImgResult[nombreAleatoire(enfantImgResult.length)-1]).css('display','block');
+}
+
+function sonResultEntendu(niveau) {
+	var enfantSonResult=$('#' + niveau  + 'Audio').children();
+	$(enfantSonResult[nombreAleatoire(enfantSonResult.length)-1])[0].play();
+	
+}
